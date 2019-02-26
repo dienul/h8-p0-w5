@@ -11,7 +11,13 @@ karena 1 + 5 + 4 + 2 = 12.
  */
 
 function totalDigitRekursif(angka) {
-  // you can only write your code here!
+ var str = String(angka)
+
+ if(str.length === 0){
+   return 0
+ } else {
+   return Number(str[0])+ totalDigitRekursif(str.slice(1))
+ }
 }
 
 // TEST CASES
